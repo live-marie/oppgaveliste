@@ -8,10 +8,13 @@ for i in range (antall_oppgaver):
     oppgave_navn = input("hva skal oppgaven hete? ")
     oppgaver.append (oppgave_navn)
 print(oppgaver)
-fil = open("oppgaver.txt", "a")
-for oppgave in oppgaver:
-    fil.write(oppgave)
-fil.close()
 
+def skriv_til_fil(filnavn):
+    fil = open(filnavn, "a")
+    for oppgave in oppgaver:
+        fil.write(oppgave)
+    fil.close()
+
+skriv_til_fil("oppgaver til liste.txt")
 
 
